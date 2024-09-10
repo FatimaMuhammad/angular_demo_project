@@ -1,0 +1,144 @@
+<div class="container">
+    <!-- First Section: 20% Width (Row) -->
+    <div class="row sidebar">
+        <mat-icon class="back-icon" (click)="goBack()">arrow_back</mat-icon>
+        <div class="text-container">
+            <div class="text-one">Inbound> ASN</div>
+            <div class="text-two">ASN</div>
+        </div>
+        <div class="center-text">Checked-in</div>
+    </div>
+
+    <!-- Second Section: 80% Width (Row) -->
+    <div class="parent-container">
+    <div class="row content">
+        
+        <div class="grid-container">
+            <!-- First Column -->
+            <div class="grid-item first-column">
+                <div clas="container">
+                <div class="asn-heading">ASN#</div>
+                <div class="sub-value">AN-000001</div>
+                </div>
+
+                <div class="container">
+                    <div class="sub-heading">Expected Date And Time</div>
+                    <div class="sub-value">Aug 30,2024</div>
+                </div>
+
+                <div class="container" >
+                    <div class="sub-heading">SHIP METHOD</div>
+                    <div class="sub-value_api">{{ name }}</div>
+                </div>
+                <div class="container">
+                    <div class="sub-heading">Reference No:</div>
+                    <div class="sub-value_api"> {{ orderPacked }}</div>
+                </div>
+
+                <div class="container">
+                    <div class="sub-heading">Reference 2</div>
+                    <div class="sub-value_api">{{ unitsPacked }}</div>
+                </div>
+
+                <div class="container">
+                    <div class="sub-heading">Buyer Name</div>
+                    <div class="sub-value_api">{{ name }}</div>
+                </div>
+
+                <div class="container">
+                    <div class="sub-heading">Container No</div>
+                    <div class="sub-value_api">{{ orderPacked }}</div>
+                </div>
+
+                <div class="container">
+                    <div class="sub-heading">Checkedin Time</div>
+                    <div class="sub-value">08/30/2024 07:32 am</div>
+                </div>
+
+            </div>
+
+            <!-- Second Columns -->
+
+            <div class="grid-item second-column">
+                <div class="asn-heading">Created at</div>
+                <div class="sub-value">Aug 30,2024</div>
+
+                <div class="container">
+                    <span class="label">Trucking #</span>
+                    <span class="value" style="cursor: pointer;" (click)="openDialog()">&#8230;</span> <!-- Ellipses -->
+                    <!-- <span class="value">{{ data.label2 }}</span> -->
+                </div>
+
+                <div class="container">
+                    <span class="label">Attachment</span>
+                    <!-- <div class="sub-value_api">{{ unitsPacked }}</div> -->
+                    <div class="sub-value_api">{{ unitsPacked }}</div>
+                    <!-- <span class="value">{{ data.attachment }}</span> -->
+                </div>
+                <div class="container">
+                    <span class="label">Reference 1</span>
+                    <!-- <div class="sub-value_api">{{ orderPacked }}</div> -->
+                    <div class="sub-value_api">{{ orderPacked }}</div>
+                    <!-- <span class="value">{{ data.label2 }}</span> -->
+                </div>
+                <div class="container">
+                    <span class="label">Vendor Name</span>
+                    <div class="sub-value_api">{{ name }}</div>
+                    <!-- <span class="value">{{ data.vendor }}</span> -->
+                </div>
+                <div class="container">
+                    <span class="label">Container Size</span>
+                    <div class="sub-value_api">{{ unitsPacked}}</div>
+                    <!-- <span class="value">{{ data.label2 }}</span> -->
+                </div>
+                <div class="container">
+                    <span class="label">Special Instruction</span>
+                    <div class="sub-value_api">{{name }}</div>
+                    <!-- <span class="value">{{ data.label2 }}</span> -->
+                </div>
+            </div>
+   <!--third column-->
+            <div class="grid-item third-colums">
+
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input" />
+                    <span class="search-label">ASN-TO</span>
+                </div>
+
+                <div class="container">
+                    <span class="label">Unload Task ID#</span>
+                    <div class="sub-value_api">{{ orderPacked }}</div>
+                    <!-- <span class="value">{{ data.unload }}</span> -->
+                </div>
+                <div class="container">
+                    <span class="label">Recieved & Putaway TasK ID#</span>
+                    <div class="sub-value_api">{{unitsPacked }}</div>
+                    <!-- <span class="value">{{ data.recieved }}</span> -->
+                </div>
+                <div class="container">
+                    <span class="label">PO#</span>
+                    <div class="sub-value_api">{{orderPacked }}</div>
+                    <!-- <span class="value">{{ data.po }}</span> -->
+                </div>
+
+            </div>
+
+            <!-- Fourth Column (Icon and History) -->
+            <div class="grid-item history-column">
+                <div class="history-container">
+                    <mat-icon>history</mat-icon>
+                    <span class="history-text">History</span>
+                </div>
+            </div>
+
+
+          
+        </div>
+       
+    </div>
+    <section class="bottom-section">
+        <!-- Another section attached to the bottom -->
+        <app-bottom-section></app-bottom-section> 
+      </section> 
+     </div>
+</div>

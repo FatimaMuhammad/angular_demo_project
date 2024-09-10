@@ -1,0 +1,71 @@
+/* Style for the bottom content */
+.bottom-content {
+  padding: 20px; /* Add padding for spacing */
+  margin-top: auto; /* Push the bottom section to the footer */
+  background-color: transparent; /* Ensure the background is transparent */
+}
+
+/* Style for the table */
+.table {
+  // border: grey;  
+  border-radius: 2px;
+  border-color: grey;
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Collapse borders */
+  margin: 10px 0; /* Margin at the top and bottom */
+  background-color: white; /* Set background to white */
+}
+
+/* Header style */
+.table thead {
+  background-color:rgba(235,239,239,255);/* Light grey background for the header */
+}
+
+/* Header cells style */
+.table th {
+  background-color:rgba(235,239,239,255);
+  font-weight: 500;
+  color: black;
+  padding: 10px; /* Add padding to header cells */
+  text-align: left; /* Align text to the left */
+}
+
+/* Row style */
+.table tr {
+  text-align: left; /* Align text to the left */
+}
+
+/* Body cells style */
+.table td {
+  
+  padding: 10px; /* Add padding to body cells */
+  border: none; /* Remove border for body cells */
+}
+
+/* Optional: Change text color for clarity */
+.table tr:first-child td {
+  padding: 10px; /* Add padding to header cells */
+  text-align: left;
+  font-size: small;
+  color: rgb(19, 10, 10); /* Change text color for 'No Record Found' */
+}
+
+/* SKU cell styling */
+.sku-cell {
+  display: flex;
+  align-items: center;
+}
+
+.sku-cell .icon {
+  margin-right: 8px;
+}
+
+.sku-cell .upper-text {
+  display: block;
+  color: grey;
+}
+
+.sku-cell .lower-text {
+  display: block;
+  color: black;
+}

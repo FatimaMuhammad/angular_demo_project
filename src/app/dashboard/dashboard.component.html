@@ -1,0 +1,23 @@
+<!-- dashboard.component.html -->
+<!-- dashboard.component.html -->
+
+<!-- dashboard.component.html -->
+
+<div class="sidebar">
+    <!-- Logo at the top -->
+    <div class="logo">
+      <img src="assets/img/app-logo.png" alt="App Logo">
+    </div>
+  
+    <!-- Navigation items -->
+    <div class="nav-item" *ngFor="let item of navItems; let i = index">
+      <div class="item-content">
+        <img [src]="item.image" alt="Item Image" class="item-image">
+        <span class="item-text">{{ item.text }}</span>
+      </div>
+      <div class="dropdown-icon" *ngIf="i >= 5 || i==2">  <!-- Show dropdown for items 3 and beyond -->
+        <img src="assets/img/down-arrow.png" alt="Dropdown Icon">
+      </div>
+    </div>
+  </div>
+  

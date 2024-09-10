@@ -1,0 +1,92 @@
+/* dashboard.component.css */
+
+// .dashboard {
+//     background-color: #d4edda;
+//     padding: 10px;
+//     border: 2px solid #c3e6cb;
+//   }
+  
+//   .dashboard button {
+//     background-color: #28a745;
+//     color: white;
+//     border: none;
+//     padding: 5px 10px;
+//     cursor: pointer;
+//   }
+  
+//   .dashboard button:hover {
+//     background-color: #218838;
+//   }
+  
+//   .dashboard div {
+//     margin-top: 10px;
+//     padding: 10px;
+//     background-color: #f8f9fa;
+//     border: 1px solid #c3e6cb;
+//   }
+  /* dashboard.component.css */
+
+/* Sidebar container */
+.sidebar {
+
+    width: 200px;
+    // background-color: none;
+    // color: white;
+    padding: 5px 2px;
+    // min-height: 50vh;
+  }
+  
+  /* Logo section */
+  .logo img {
+    width: 41%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Navigation item */
+  .nav-item {
+    
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    margin-bottom: 7px;
+    background-color:white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    background-color: #e8eaf0;
+  }
+  
+  /* Item content (image + text) */
+  .item-content {
+
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-image {
+    width: 15px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .item-text {
+    font-size: 9px;
+    text-decoration-color: black;
+    font-family: sans-serif;
+  }
+  
+  /* Dropdown icon */
+  .dropdown-icon img {
+    
+    background-color: rgb(80, 59, 59);
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* Make the icon white */
+  }
+  

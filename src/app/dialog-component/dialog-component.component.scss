@@ -1,0 +1,32 @@
+.dialog-title {
+  position: relative;
+  padding-bottom: 10px;
+  font-size: 20px;
+  
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black; /* Add bottom border below the title */
+}
+
+mat-dialog-content {
+  padding: 20px; /* Add padding inside the dialog content */
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end; /* Align the cancel button to the right */
+  margin-top: 10px; /* Space between content and actions */
+}
+
+mat-dialog-actions button {
+  background-color: #b6adad; /* Red background for the cancel button */
+  color: white; /* White text for the button */
+  padding: 10px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+mat-dialog-actions button:hover {
+  background-color: #d32f2f; /* Darker red when hovered */
+}

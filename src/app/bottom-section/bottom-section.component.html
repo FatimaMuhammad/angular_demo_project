@@ -1,0 +1,88 @@
+<!-- bottom-section.component.html -->
+<div class="bottom-content">
+
+
+  <div class="grid-container">
+
+    <!-- Row at the bottom that spans full width for the table -->
+    <div class="grid-item table-container">
+
+
+
+      <table mat-table [dataSource]="dataSource_bot" class="mat-elevation-z8 table">
+
+        <!-- L.NO Column -->
+        <ng-container matColumnDef="lno" >
+          <th mat-header-cell *matHeaderCellDef> L.NO </th>
+          <td mat-cell *matCellDef="let element"> {{ element.lno }} </td>
+        </ng-container>
+
+        <!-- LO# Column -->
+        <ng-container matColumnDef="lo">
+          <th mat-header-cell *matHeaderCellDef> L.O# </th>
+          <td mat-cell *matCellDef="let element"> {{ orderPacked }} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="sku">
+          <th mat-header-cell *matHeaderCellDef> SKU </th>
+          <td mat-cell *matCellDef="let element">
+            <div class="sku-cell">
+              <!-- Icon -->
+              <mat-icon class="icon">inventory</mat-icon>
+              
+              <!-- Text content with two rows of text -->
+              <div>
+                <span class="upper-text">{{element.sku1}}</span>
+                <span class="lower-text">{{element.sku}}</span>
+              </div>
+            </div>
+          </td>
+        </ng-container>
+        
+        
+    
+        
+
+        <!-- SKU QTY Column -->
+        <ng-container matColumnDef="skuQty">
+          <th mat-header-cell *matHeaderCellDef> SKU QTY </th>
+          <td mat-cell *matCellDef="let element"> {{element.skuQty}} </td>
+        </ng-container>
+
+        <!-- SKU COST Column -->
+        <ng-container matColumnDef="skuCost">
+          <th mat-header-cell *matHeaderCellDef> SKU COST </th>
+          <td mat-cell *matCellDef="let element"> {{element.skuCost}} </td>
+        </ng-container>
+
+        <!-- UOM Column -->
+        <ng-container matColumnDef="uom">
+          <th mat-header-cell *matHeaderCellDef> UOM </th>
+          <td mat-cell *matCellDef="let element"> {{element.uom}} </td>
+        </ng-container>
+
+        <!-- Required Delivery Date Column -->
+        <ng-container matColumnDef="requiredDate">
+          <th mat-header-cell *matHeaderCellDef> Required Delivery Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.requiredDate}} </td>
+        </ng-container>
+
+        <!-- Assign To Column -->
+        <ng-container matColumnDef="assignTo">
+          <th mat-header-cell *matHeaderCellDef> Assign To </th>
+          <td mat-cell *matCellDef="let element"> {{unitsPacked}} </td>
+        </ng-container>
+
+        <!-- Header and Row Definitions -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+
+
+
+    </div>
+  </div>
+
+
+</div>

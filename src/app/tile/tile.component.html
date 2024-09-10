@@ -1,0 +1,383 @@
+<div [ngClass]="{'full-screen': isFullScreen}" class="content-container">
+
+
+  <div class="tile"> <!-- <nav class="navbar">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="Logo">
+    </div>
+    <div class="account-info">
+      <div class="account-icon">
+        <img src="assets/img/person.png" alt="Account Icon">
+      </div>
+      <div class="account-details">
+        <span class="username">fatima</span>
+        <span class="user-role">readaspen-s</span>
+      </div>
+      <button class="dropdown-button">
+        <svg width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+          <path d="M1.5 5.5a.5.5 0 0 1 .708-.707L8 9.293l5.792-5.5A.5.5 0 0 1 15.5 5.5l-6 5.5-6-5.5z" />
+        </svg>
+      </button>
+    </div>
+  </nav> -->
+    <app-dropdown></app-dropdown>
+
+  </div>
+
+  <div class="Dashbaord-container">
+    <div class="headerDashboard">
+      <div class="title-section">
+        <h1 class="title">Home</h1>
+        <h2 class="subtitle">Dashbaord</h2>
+      </div>
+      <div class="status-section">
+        <div class="status-item">
+          <div class="status-circle"></div>
+          <span class="status-text">To Do</span>
+        </div>
+        <div class="status-item">
+          <span class="status-bar"> | </span>
+          <div class="status-circle"></div>
+          <span class="status-text">In Progress</span>
+        </div>
+        <div>
+          <div class="status-item">
+            <span class="status-bar"> | </span>
+            <div class="status-circle"></div>
+            <span class="status-text">Done</span>
+          </div>
+        </div>
+        <div class="zoom-in-icon" (click)="toggleFullscreen()">
+          <img src="assets/img/expand.png" alt="Zoom In">
+          <span class="wrap">{{isFullScreen ? " Exit" : "show"}} to view full screen</span>
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+    <div class="card-container">
+      <div class="cardcontainer">
+        <div class="card" [ngClass]="{ 'flip': isFlipped1 }">
+          <div class="card-front">
+            <div class="card-heading">
+              <h2>Units</h2>
+              <span class="unit-text"></span>
+              <i class="flip-icon" (click)="flipCard(1)">&#x21bb;</i>
+            </div>
+            <div class="card-content">
+              <div class="card-child grey-background">
+                <!-- First Child Div with Light Grey Background -->
+                <div class="card-sub-child">
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text text-start">Packed</div>
+                      <div class="card-text text-end">{{ packedUnits }}</div>
+                    </div>
+                  </div>
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text">Picked</div>
+                      <div class="card-text text-end">{{ pickedUnits}}</div>
+                    </div>
+                  </div>
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text">Shipped</div>
+                      <div class="card-text text-end">{{ shippedUnits }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-child pink-background">
+                <!-- Second Child Div with Light Pink Background -->
+                <div class="card-sub-child">
+                  <div class="card-item-two">
+                    <div class="card-text-container">
+                      <div class="card-text">Unit Shipped Yesterday</div>
+                      <div class="card-text text-end-two">{{ unitShipped }}</div>
+                    </div>
+                  </div>
+                  <div class="card-item-two">
+                    <div class="card-text-container">
+                      <div class="card-text">Units in Queue</div>
+                      <div class="card-text text-end-two">{{ unitsInQueue }}16759</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="card-heading">
+              <h2>Orders</h2>
+              <span class="unit-text"></span>
+              <i class="flip-icon" (click)="flipCard(1)">&#x21bb;</i>
+            </div>
+            <div class="card-content">
+              <div class="card-child grey-background">
+                <!-- First Child Div with Light Grey Background -->
+                <div class="card-sub-child">
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text text-start">Packed</div>
+                      <div class="card-text text-end">{{ packedUnits }}</div>
+                    </div>
+                  </div>
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text">Picked</div>
+                      <div class="card-text text-end">{{ pickedUnits}}</div>
+                    </div>
+                  </div>
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text">Shipped</div>
+                      <div class="card-text text-end">{{ shippedUnits }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-child pink-background">
+                <!-- Second Child Div with Light Pink Background -->
+                <div class="card-sub-child">
+                  <div class="card-item-two">
+                    <div class="card-text-container">
+                      <div class="card-text">Unit Shipped Yesterday</div>
+                      <div class="card-text text-end-two">{{ unitShipped }}</div>
+                    </div>
+                  </div>
+                  <div class="card-item-two">
+                    <div class="card-text-container">
+                      <div class="card-text">Units in Queue</div>
+                      <div class="card-text text-end-two">{{ unitsInQueue }}16759</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="">
+        <div class="card" [ngClass]="{ 'flip': isFlipped2 }">
+          <div class="card-front">
+            <div class="card-heading">
+              <h2>orders</h2>
+              <span class="unit-text"></span>
+              <i class="flip-icon" (click)="flipCard(2)">&#x21bb;</i>
+            </div>
+            <div class="card-content">
+              <div class="card-child grey-background">
+                <!-- First Child Div with Light Grey Background -->
+                <div class="card-sub-child">
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text text-start">Packed</div>
+                      <div class="card-text text-end">{{ packedUnits }}</div>
+                    </div>
+                  </div>
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text">Picked</div>
+                      <div class="card-text text-end">{{ pickedUnits}}</div>
+                    </div>
+                  </div>
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text">Shipped</div>
+                      <div class="card-text text-end">{{ shippedUnits }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-child pink-background">
+                <!-- Second Child Div with Light Pink Background -->
+                <div class="card-sub-child">
+                  <div class="card-item-two">
+                    <div class="card-text-container">
+                      <div class="card-text">Unit Shipped Yesterday</div>
+                      <div class="card-text text-end-two">{{ unitShipped }}</div>
+                    </div>
+                  </div>
+                  <div class="card-item-two">
+                    <div class="card-text-container">
+                      <div class="card-text">Units in Queue</div>
+                      <div class="card-text text-end-two">{{ unitsInQueue }}16759</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="card-heading">
+              <h2>units</h2>
+              <span class="unit-text"></span>
+              <i class="flip-icon" (click)="flipCard(2)">&#x21bb;</i>
+            </div>
+            <div class="card-content">
+              <div class="card-child grey-background">
+                <!-- First Child Div with Light Grey Background -->
+                <div class="card-sub-child">
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text text-start">Packed</div>
+                      <div class="card-text text-end">{{ packedUnits }}</div>
+                    </div>
+                  </div>
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text">Picked</div>
+                      <div class="card-text text-end">{{ pickedUnits}}</div>
+                    </div>
+                  </div>
+                  <div class="card-item">
+                    <div class="card-text-container">
+                      <div class="card-text">Shipped</div>
+                      <div class="card-text text-end">{{ shippedUnits }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-child pink-background">
+                <!-- Second Child Div with Light Pink Background -->
+                <div class="card-sub-child">
+                  <div class="card-item-two">
+                    <div class="card-text-container">
+                      <div class="card-text">Unit Shipped Yesterday</div>
+                      <div class="card-text text-end-two">{{ unitShipped }}</div>
+                    </div>
+                  </div>
+                  <div class="card-item-two">
+                    <div class="card-text-container">
+                      <div class="card-text">Units in Queue</div>
+                      <div class="card-text text-end-two">{{ unitsInQueue }}16759</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <div class="header">
+          <h1>
+            Pickers
+          </h1>
+          <div class="card-item-two-head">
+            <div class="card-text-container">
+
+              <div class="card-text">Total Order Picked</div>
+              <span class="status-bar-slash"> | </span>
+              <div class="card-text text-end-two">{{ unitShipped }}</div>
+            </div>
+          </div>
+        </div>
+       
+        <table mat-table [dataSource]="packersDataSource" class="styled-table">
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let data">
+              <span class="name-cell" (click)="onNameClick(data)">
+                {{data.name | titlecase}}
+              </span>
+            </td>
+          </ng-container>
+
+          <!-- Order Packed Column -->
+          <ng-container matColumnDef="orderPacked">
+            <th mat-header-cell *matHeaderCellDef> Order Packed </th>
+            <td mat-cell *matCellDef="let data"> {{data.orderPacked}} </td>
+          </ng-container>
+
+          <!-- Units Packed Column -->
+          <ng-container matColumnDef="unitsPacked">
+            <th mat-header-cell *matHeaderCellDef> Units Packed </th>
+            <td mat-cell *matCellDef="let data"> {{data.unitsPacked}} </td>
+          </ng-container>
+
+          <!-- Header and Row Definitions -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator #packersPaginator class="mat-paginator-container" [pageSize]="5" [pageSizeOptions]="[5, 10, 20]"
+          [showFirstLastButtons]="true">
+        </mat-paginator>
+        
+      
+
+
+
+      </div>
+      <div class="card">
+        <div class="header">
+          <h1>
+            Packers
+          </h1>
+          <div class="card-item-two-head">
+            <div class="card-text-container">
+              <div class="card-text">Total Order Packed</div>
+              <span class="status-bar-slash"> | </span>
+              <div class="card-text text-end-two">
+                {{ unitShipped }}</div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="table-container">
+          <table mat-table [dataSource]="pickersDataSource" class="styled-table">
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let data">
+              <span class="name-cell" (click)="onNameClick(data)">
+                {{data.name | titlecase}}
+              </span>
+            </td>
+          </ng-container>
+
+            <!-- Order Packed Column -->
+            <ng-container matColumnDef="orderPacked">
+              <th mat-header-cell *matHeaderCellDef> Order Packed </th>
+              <td mat-cell *matCellDef="let element"> {{element.orderPacked}} </td>
+            </ng-container>
+
+            <!-- Units Packed Column -->
+            <ng-container matColumnDef="unitsPacked">
+              <th mat-header-cell *matHeaderCellDef> Units Packed </th>
+              <td mat-cell *matCellDef="let element"> {{element.unitsPacked}} </td>
+            </ng-container>
+
+            <!-- Header and Row Definitions -->
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+          <mat-paginator #pickersPaginator class="mat-paginator-container" [pageSize]="5"
+            [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
+          </mat-paginator>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
